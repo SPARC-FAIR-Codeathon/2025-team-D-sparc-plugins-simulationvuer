@@ -1,0 +1,21 @@
+{
+    "apiLocation": {
+        "label": "API Location",
+        "type": "string",
+        "placeholder": "https://api.sparc.science",
+        "default": "https://api.sparc.science"
+    },
+    "id": {
+        "label": "Dataset ID",
+        "type": "select",
+        "options": [
+            { "value": 0, "label": "0 - Invalid (Non-simulation)" },
+            { "value": 135, "label": "135 - Human sinus node action potential" },
+            { "value": 157, "label": "157 - Fabbri-based composite SAN model" },
+            { "value": 308, "label": "308 - Kember Cardiac Nerve Model" },
+            { "value": 318, "label": "318 - Multi-scale rabbit cardiac models" },
+            { "value": 320, "label": "320 - Multi-scale human cardiac models" }
+        ],
+        "default": 135
+    }
+}
