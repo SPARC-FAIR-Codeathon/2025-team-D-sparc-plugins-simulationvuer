@@ -4,12 +4,16 @@ const pathSrc = path.resolve(__dirname, "./src");
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import Components from "unplugin-vue-components/vite";
+import vueJsx from '@vitejs/plugin-vue-jsx';
+import cssInjected from 'vite-plugin-css-injected-by-js'
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 
 export default defineConfig(({ command, mode }) => {
   const config = {
     plugins: [
       vue(),
+      vueJsx(),
+      cssInjected(),
       Components({
         // Allow auto load markdown components under `./src/components/`.
         extensions: ["vue", "md"],
@@ -27,10 +31,11 @@ export default defineConfig(({ command, mode }) => {
       lib: {
         entry: path.resolve(__dirname, "./src/components/index.js"),
         name: "SimulationVuer",
-        fileName: "simulationvuer",
+        formats: ['umd'],
+        fileName: (format)=>`my-app.${format}.js`,
       },
       rollupOptions: {
-        external: ["vue", "@abi-software/svg-sprite", "@abi-software/plotvuer"],
+        external: ["vue"],
         output: {
           globals: {
             vue: "Vue",
