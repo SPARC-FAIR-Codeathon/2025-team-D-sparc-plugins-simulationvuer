@@ -1,8 +1,8 @@
 name: Deploy Docs and App to GitHub Pages
 
 on:
-  push:
-    branches: [docs, main]
+  # push:
+  #   branches: [docs, main]
   workflow_dispatch:
 
 permissions:
