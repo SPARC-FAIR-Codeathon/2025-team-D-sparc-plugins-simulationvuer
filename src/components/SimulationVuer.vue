@@ -820,12 +820,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .simulation-vuer {
-  --el-color-primary: #7B2CBF;            /* Deep Royal Violet */
-  --el-color-primary-light-7: #C084FC;   /* Soft Orchid Glow */
-  --el-color-primary-light-8: #D8B4FE;   /* Lavender Mist */
-  --el-color-primary-light-9: #F3E8FF;   /* Rose Quartz Tint */
-  background: #EEAECA;
-  background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+  --el-color-primary: #8300BF;
+  --el-color-primary-light-7: #DAB3EC;
+  --el-color-primary-light-8: #E6CCF2;
+  --el-color-primary-light-9: #F3E6F9;
 }
 
 :deep(.el-button:hover) {
@@ -981,22 +979,6 @@ p.error {
 
 p.input-parameters {
   margin-bottom: 8px;
-  font-family: 'Cinzel', serif; /* Elegant Google Font */
-  font-size: 15px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  color: #fff;
-  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
-  padding: 16px 32px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  user-select: none;
-}
-p.input-parameters:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
 }
 
 p.name,
